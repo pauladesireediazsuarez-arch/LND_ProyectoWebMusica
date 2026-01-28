@@ -9,18 +9,19 @@ body{
     font-family: sans-serif;
 }
 .menu{
-    position: sticky;
-    width: 100%;
+        position: sticky;
+        width: 100%;
 }
 .menu ul{
-    list-style-type: none;
-    background-color: black;
-    font-size: small;
+        display: flex;
+        list-style-type: none;
+        background-color: black;
+        font-size: small;
 }
 .menu li{
-    display: inline-block;
-    padding: 15px;
-    color: white;
+        display: inline-block;
+        padding: 15px;
+        color: white;
 }
 .menu li:hover{
     color: rgb(184, 41, 184);
@@ -41,6 +42,7 @@ body{
     display: flex;
     gap: 30px;
     width: 80%;
+    margin: auto;
     margin-left: 160px;
     padding: 30px;
     background-color: #111;
@@ -51,7 +53,7 @@ body{
 }
 h2{
     color: rgb(211, 180, 42);
-    margin-left: 160px;
+    margin-left: 150px;
     margin-bottom: 20px;
 }
 .album{
@@ -102,4 +104,31 @@ footer img{
 }
 .Contactanos .p{
     font-size: small;
+}
+@media (max-width: 480px){
+    .TopEspañol{
+        padding: 15px;
+        gap: 15px;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+
+    footer{
+        height: auto;
+        padding: 10px;
+    }
+}
+@media (max-width: 768px){
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu li{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
 }
