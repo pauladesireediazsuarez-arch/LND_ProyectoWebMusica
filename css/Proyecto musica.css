@@ -8,20 +8,53 @@ body{
     color: white;
     font-family: sans-serif;
 }
+#menu-desplegable{
+    display: none;
+}
+.menu-icono{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 2000;
+    transition: transform 0.4s ease;
+}
 .menu{
-        position: sticky;
-        width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+#menu-desplegable:checked ~ .menu{
+    width: 220px;
+}
+#menu-desplegable:checked + .menu-icono{
+    transform: rotate(-180deg);
+}
+#menu-desplegable:checked ~ .menu a{
+    opacity: 1;
 }
 .menu ul{
-        display: flex;
-        list-style-type: none;
-        background-color: black;
-        font-size: small;
+    display: flex;
+    list-style-type: none;
+    background-color: black;
+    font-size: small;
 }
 .menu li{
-        display: inline-block;
-        padding: 15px;
-        color: white;
+    display: inline-block;
+    padding: 15px;
+    color: white;
+}
+.menu li img{
+    width: 25px;
 }
 .menu li:hover{
     color: rgb(184, 41, 184);
@@ -31,6 +64,9 @@ body{
 .principal{
     text-align: center;
     padding: 15px;
+}
+.principal img{
+    width: 50px;
 }
 .principal p{
     font-size: small;
