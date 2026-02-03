@@ -7,6 +7,7 @@ body{
     background-color: rgba(0, 0, 0, 0.884);
     color: white;
     font-family: sans-serif;
+    padding-bottom: 90px;
 }
 .menu{
     top: 0;
@@ -33,22 +34,26 @@ body{
     font-weight: bold;
     cursor: pointer
 }
-.principal{
+.principal header h1{
+    text-align: center;
+    padding: 10px;
+}
+.principal header p{
     text-align: center;
     padding: 15px;
 }
-#haederNoisify{
-    width: 200rem;
-    height: 35%;
+.principal header img{
+    width: 35px;
 }
-.principal img{
-    width: 20px;
+#headerNoisify{
+    width: 145rem;
+    height: 40rem;
+    opacity: 45%;
 }
-.principal p{
-    font-size: small;
-}
-.principal h1{
-    padding: 15px;
+.Tops{
+    /*Probar a poner otro cajon de un color mas claro donde vayan todos los Tops*/
+    /*Tampoco se si cambiar los cajones de cada album y ponerle otro color clarito dentro
+    teniendo en cuenta que quiero poner texto y breve descripción*/
 }
 .TopEspañol{
     display: flex;
@@ -135,16 +140,19 @@ footer{
     background-color: black;
     width: 100%;
     height: 50px;
-    padding: 0 30px;
+    padding: 20px 30px;
     align-items: center;
 }   
-footer img{
+footer .Redes img{
     height: 30px;
     padding: 3px;
     border-radius: 6px;
 }
 .Redes:hover{
     cursor: pointer;
+}
+footer .Noisify img{
+    height: 60px;
 }
 .Contactanos{
     display: flex;
