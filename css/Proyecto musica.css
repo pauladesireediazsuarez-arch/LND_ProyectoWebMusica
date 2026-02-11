@@ -14,11 +14,11 @@ body{
     margin: 0;
     position: sticky;
     flex-direction: column;
+    z-index: 3000;
+    background-color: #080808;
 }
 .menu ul{
-    position: sticky;
     list-style-type: none;
-    background-color: black;
     font-size: small;
 }
 .menu li{
@@ -41,19 +41,38 @@ body{
 header{
     background-color: #181818;
     display: flex;
+    position: relative;
     justify-content: center;
 }
 header #HeaderNoisify{
     width: 25rem;
     z-index: 2000;
+    position: absolute;
 }
 header .fondo{
-    display: inline-block;
+    overflow: hidden;
+}
+header .fondo .carrusel{
+    display: flex;
+    flex-wrap: nowrap;
     z-index: 1000;
+    
 }
-header .fondo img{
-    width: 15%;
+header .fondo .carrusel{
+    display: flex;
+    height: 100%;
 }
+header .fondo .carrusel img{
+    width: 20%;
+    padding: 3px;
+    filter:brightness(60%);
+    flex-shrink: 0;
+    object-fit: cover;
+    display: inline-block;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
 .Tops{
     /*Probar a poner otro cajon de un color mas claro donde vayan todos los Tops*/
     /*Tampoco se si cambiar los cajones de cada album y ponerle otro color clarito dentro
@@ -141,14 +160,14 @@ footer{
     bottom: 0;
     left: 0;
     display: flex;
-    background-color: black;
+    background-color: #080808;
     width: 100%;
     height: 50px;
     padding: 20px 30px;
     align-items: center;
 }   
 footer .Redes img{
-    height: 30px;
+    height: 27px;
     padding: 3px;
     border-radius: 6px;
 }
@@ -166,4 +185,70 @@ footer .Noisify img{
 }
 .Contactanos .p{
     font-size: small;
+}
+
+@media screen and (max-width: 1024px){
+    /* Para tablets */
+
+    header #HeaderNoisify {
+        width: 10rem;
+    }
+    
+    .TopEspañol,
+    .TopPop,
+    .TopRock{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+        padding: 17px;
+    }
+
+    h2, #h2Pop, #h2Rock{
+        margin-left: 90px;
+    }
+
+    .album{
+        width: 130px;
+        padding: 15px;
+    }
+
+    footer{
+        height: auto;
+        padding: 10px;
+        align-items: center;
+        gap: 10px;
+    }
+    footer p{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /* Para móviles */
+
+    header #HeaderNoisify{
+        width: 8rem;
+        margin-bottom: 10px;
+    }
+
+    header .fondo .carrusel img{
+        width: 27%;
+    }
+
+    .TopEspañol,
+    .TopPop,
+    .TopRock {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .album{
+        width: 130px;
+        max-width: 250px;
+        margin-bottom: 15px;
+    }
 }

@@ -9,31 +9,34 @@
 </head>
 
 <body>
-    </label>
 
+    <nav class="menu">
+        <ul>
+            <li><img src="img/Icono noisify (2).png" alt="Noisify"></li>
+            <li>Inicio</li>
+            <li>Álbumes</li>
+            <li>Géneros</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    
     <div class="principal">
-        <nav class="menu">
-            <ul>
-                <li><img src="img/Icono noisify (2).png" alt="Noisify"></li>
-                <li>Inicio</li>
-                <li>Álbumes</li>
-                <li>Géneros</li>
-                <li>Contacto</li>
-            </ul>
-        </nav>
 
         <header>
             <img src="img/Icono noisify (2).png" alt="Noisify" id="HeaderNoisify">
             <div class="fondo">
-                <img src="img/Top Español/Entre dos aguas Paco de Lucía Top 1.jpg" alt="FondoPacodeLucía">
-                <img src="img/Top Jazz/Getz - Gilberto Stan Getz & Joao Gilberto Top 4.jpg" alt="FondoGetz">
-                <img src="img/Top Rock/Nevermind Nirvana Top 3.jpg" alt="FondoNirvana">
-                <img src="img/Top Pop/Song in a Minor Alicia Keys Top 5.jpg" alt="FondoAliciaKeys">
-                <img src="img/Top Rap/The Marshall Mathers Eminem Top 1.jpg" alt="FondoEminem">
+                <div class="carrusel" id="carrusel">
+                    <img src="img/Top Español/Entre dos aguas Paco de Lucía Top 1.jpg" alt="FondoPacodeLucía">
+                    <img src="img/Top Jazz/Getz - Gilberto Stan Getz & Joao Gilberto Top 4.jpg" alt="FondoGetz">
+                    <img src="img/Top Rock/Nevermind Nirvana Top 3.jpg" alt="FondoNirvana">
+                    <img src="img/Top Pop/Song in a Minor Alicia Keys Top 5.jpg" alt="FondoAliciaKeys">
+                    <img src="img/Top Rap/The Marshall Mathers Eminem Top 1.jpg" alt="FondoEminem">
+                </div>
             </div>
         </header>     
-            <p>Entérate de los albumes TOPS GLOBALES de cada género</p>
+        <p>Entérate de los albumes TOPS GLOBALES de cada género</p>
             
+        <script src="js/script.js"></script>
     </div>
     
     <div class="Tops">
@@ -41,10 +44,10 @@
         <h2>Top Español</h2>
             <section class="TopEspañol">
                 
-                <article class="album">
-                    <img src="img/Top Español/Entre dos aguas Paco de Lucía Top 1.jpg" alt="Top1">
-                    <h4>Paco de Lucía</h4>
-                    <p>Entre dos aguas</p>
+                <article class="album" id="Top1">
+                        <img src="img/Top Español/Entre dos aguas Paco de Lucía Top 1.jpg" alt="Top1">
+                        <h4>Paco de Lucía</h4>
+                        <p>Entre dos aguas</p>
                 </article>
 
                 <article class="album">
@@ -75,10 +78,10 @@
             <h2 id="h2Pop">Top Pop</h2>
             <section class="TopPop">
 
-                <article class="album">
-                    <img src="img/Top Pop/Thriller Michael Jackson Top 1.jpg" alt="Top1Pop">
-                    <h4>Michael Jackson</h4>
-                    <p>Thriller</p>
+                <article class="album" id="Top1">
+                        <img src="img/Top Pop/Thriller Michael Jackson Top 1.jpg" alt="Top1Pop">
+                        <h4>Michael Jackson</h4>
+                        <p>Thriller</p>
                 </article>
 
                 <article class="album">
@@ -110,10 +113,10 @@
             <h2 id="h2Rock">Top Rock</h2>
             <section class="TopRock">
 
-                <article class="album">
-                    <img src="img/Top Rock/A night at the opera Queen Top 1.jpg" alt="Top1Rock">
-                    <h4>Queen</h4>
-                    <p>A night at the opera</p>
+                <article class="album" id="Top1">
+                        <img src="img/Top Rock/A night at the opera Queen Top 1.jpg" alt="Top1Rock">
+                        <h4>Queen</h4>
+                        <p>A night at the opera</p>
                 </article>
 
                 <article class="album">
@@ -145,24 +148,25 @@
         </section>
     </div>
     <footer>
-        <div class="Redes">
+        <section class="Redes">
             <img src="img/Redes sociales/facebook.png" alt="Facebook">
             <img src="img/Redes sociales/instagram.png" alt="Instagram">
-            <img src="img/Redes sociales/snapchat.jpg" alt="Snapchat">
-            <img src="img/Redes sociales/twitter.jpg" alt="Twitter">
-        </div>
+            <img src="img/Redes sociales/snapchat.png" alt="Snapchat">
+            <img src="img/Redes sociales/Twitter.png" alt="Twitter">
+        </section>
 
-        <div class="Contactanos">
+        <section class="Contactanos">
             <p>Si crees que nos faltan géneros de música o álbumes por añadir, contácta con nosotros o rellena este 
                 <a href="formulario.html" class="formulario">formulario</a>
             </p>
-        </div>
+        </section>
 
-        <div class="Noisify">
+        <section class="Noisify">
             <img src="img/Icono noisify (2).png" alt="NoisifyFoot">
-        </div>
+        </section>
     </footer>    
 
     <script src="script.js"></script>
     
 </body> 
+
