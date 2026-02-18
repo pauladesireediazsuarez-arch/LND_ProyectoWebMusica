@@ -1,10 +1,11 @@
 *{
     padding: 0;
     margin: 0;
+    font-weight: bold;
     box-sizing: border-box;
 }
 body{
-    background-color: rgba(0, 0, 0, 0.884);
+    background-color: black;
     color: white;
     font-family: sans-serif;
     padding-bottom: 90px;
@@ -15,7 +16,7 @@ body{
     position: sticky;
     flex-direction: column;
     z-index: 3000;
-    background-color: #080808;
+    background-color: black;
 }
 .menu ul{
     list-style-type: none;
@@ -45,7 +46,7 @@ header{
     justify-content: center;
 }
 header #HeaderNoisify{
-    width: 25rem;
+    width: 20rem;
     z-index: 2000;
     position: absolute;
 }
@@ -56,7 +57,6 @@ header .fondo .carrusel{
     display: flex;
     flex-wrap: nowrap;
     z-index: 1000;
-    
 }
 header .fondo .carrusel{
     display: flex;
@@ -72,76 +72,41 @@ header .fondo .carrusel img{
     border-radius: 10px;
     opacity: 0.8;
 }
-
 .Tops{
-    /*Probar a poner otro cajon de un color mas claro donde vayan todos los Tops*/
-    /*Tampoco se si cambiar los cajones de cada album y ponerle otro color clarito dentro
-    teniendo en cuenta que quiero poner texto y breve descripción*/
-}
-.TopEspañol{
-    display: flex;
-    gap: 30px;
-    width: 80%;
-    margin: auto;
-    margin-left: 160px;
-    padding: 30px;
     background-color: #111;
-    border: solid rgb(189, 164, 51) 2px;
-    border-radius: 5px;
-    flex-wrap: wrap; 
-    justify-content: center;
-}
-h2{
-    color: rgb(211, 180, 42);
-    margin-left: 150px;
-    margin-bottom: 20px;
-}
-.TopPop{
-    display: flex;
-    gap: 30px;
-    width: 80%;
+    border-radius: 10px;
+    width: 99%;
     margin: auto;
-    margin-left: 160px;
-    padding: 30px;
-    background-color: #111;
-    border: solid rgb(184, 51, 189) 2px;
-    border-radius: 5px;
-    flex-wrap: wrap; 
-    justify-content: center;
 }
-#h2Pop{
-    margin-top: 20px;
-    color: rgb(184, 51, 189);
-    margin-left: 150px;
-    margin-bottom: 20px;
+h4{
+    font-weight: lighter;
+    font-size: 15px;
 }
+.TopEspañol,
+.TopPop,
 .TopRock{
     display: flex;
-    gap: 30px;
-    width: 80%;
     margin: auto;
-    margin-left: 160px;
     padding: 30px;
-    background-color: #111;
-    border: solid rgb(15, 54, 230) 2px;
-    border-radius: 5px;
+    border-radius: 8px;
     flex-wrap: wrap; 
     justify-content: center;
+    gap: 30px;
 }
-#h2Rock{
-    margin-top: 20px;
-    color: rgb(15, 54, 230);
-    margin-left: 150px;
-    margin-bottom: 20px;
+.TopEspañol h2,
+.TopPop h2,
+.TopRock h2{
+    flex-basis: 100%;
+    margin-left: 125px;
+    margin-top: 50px;
 }
 .album{
     background-color: #181818;
-    padding: 15px;
-    width: 180px;
+    padding: 20px;
+    width: 290px;
     border-radius: 10px;
     text-align: center;
-    color: white;
-    border: solid white 2px;
+    color: white;   
 }
 .album img{
     width: 100%;
@@ -157,14 +122,17 @@ h2{
 }
 footer{
     position: fixed;
+    font-size: 14px;
     bottom: 0;
     left: 0;
     display: flex;
-    background-color: #080808;
+    background-color: black;
     width: 100%;
     height: 50px;
     padding: 20px 30px;
     align-items: center;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
 }   
 footer .Redes img{
     height: 27px;
@@ -182,6 +150,7 @@ footer .Noisify img{
     flex: 1;
     justify-content: center;
     align-items: center;
+    border-radius: 7px;
 }
 .Contactanos .p{
     font-size: small;
@@ -191,9 +160,11 @@ footer .Noisify img{
     /* Para tablets */
 
     header #HeaderNoisify {
-        width: 10rem;
+        width: 10rem;   
     }
-    
+    header #HeaderNoisify img{
+        margin-bottom: 20px;
+    }
     .TopEspañol,
     .TopPop,
     .TopRock{
@@ -203,16 +174,10 @@ footer .Noisify img{
         gap: 20px;
         padding: 17px;
     }
-
-    h2, #h2Pop, #h2Rock{
-        margin-left: 90px;
-    }
-
     .album{
         width: 130px;
         padding: 15px;
     }
-
     footer{
         height: auto;
         padding: 10px;
@@ -220,11 +185,11 @@ footer .Noisify img{
         gap: 10px;
     }
     footer p{
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 743px){
     /* Para móviles */
 
     header #HeaderNoisify{
@@ -235,20 +200,47 @@ footer .Noisify img{
     header .fondo .carrusel img{
         width: 27%;
     }
-
+    .Tops{
+        width: 100%;
+        padding: 20px;
+    }
+    .scroll{
+        padding: 0;
+    }
     .TopEspañol,
     .TopPop,
     .TopRock {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        gap: 20px;
-        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x proximity;
+        justify-content: flex-start;
     }
-
+    .TopEspañol::-webkit-scrollbar,
+    .TopPop::-webkit-scrollbar,
+    .TopRock::-webkit-scrollbar {
+        display: none;
+    }
+    .TopEspañol h2,
+    .TopPop h2,
+    .TopRock h2 {
+        flex-basis: 100%;
+    }
     .album{
-        width: 130px;
-        max-width: 250px;
+        width: 100%;
+        max-width: 280px;
         margin-bottom: 15px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+    footer{
+        padding: 3px 15px;
+        gap: 7px;
+    }
+    footer .Contactanos p{
+        font-size: 10px;
+        padding: 5px;
     }
 }
