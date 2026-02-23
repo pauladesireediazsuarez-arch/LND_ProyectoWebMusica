@@ -36,7 +36,6 @@
         </header>     
         <p>Entérate de los albumes TOPS GLOBALES de cada género</p>
             
-        <script src="js/script.js"></script>
     </div>
    
     <div class="scroll">
@@ -82,7 +81,7 @@
                     <article class="album">
                             <img src="img/Top Pop/Thriller Michael Jackson Top 1.jpg" alt="Top1Pop">
                             <p>Thriller</p>
-                            <h4>Lola Flores</h4>                        
+                            <h4>Michael Jacksongit</h4>                        
                     </article>
 
                     <article class="album">
@@ -159,15 +158,68 @@
 
         <section class="Contactanos">
             <p>Si crees que nos faltan géneros de música o álbumes por añadir, contácta con nosotros o rellena este 
-                <a href="formulario.html" class="formulario">formulario</a>
+                <a href="#" id="abrirformulario" class="abrirFormulario">formulario</a>
             </p>
         </section>
 
         <section class="Noisify">
             <img src="img/Icono noisify (2).png" alt="NoisifyFoot">
         </section>
-    </footer>    
+    </footer>
 
+    <div id="modal" class="modal">
+        <div class="modal-contenido"></div>
+
+            <span id="cerrarModal" class="cerrar">&times;</span>
+
+            <h2>Sugerir un nuevo género</h2>
+
+            <form id="formulario">
+                <label>Username</label>
+                <input type="text" required placeholder="Tu usuario">
+
+                <label>¿Consideras que falta algún género?</label>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox">Jazz</label>
+                    <label><input type="checkbox">Heavy metal</label>
+                    <label><input type="checkbox">Eléctronica</label>
+                    <label><input type="checkbox">Reggae</label>
+                    <label><input type="checkbox">Clasica</label>
+                    <label><input type="checkbox" id="otroCheck"> Otro</label>
+                </div>
+
+                <input type="text" id="otroGenero" placeholder="Escribe el género" style="display: none;">
+                
+                <label>Explicación (opcional)</label>
+                <textarea rows="3" placeholder="Cuentános por qué deberíamos añadirlo"></textarea>
+
+                <label>¿Cuál es tu género favorito (opcional)</label>
+
+                <select id="generoFavorito">
+                    <option value="">Selecciona uno</option>
+                    <option>Pop</option>
+                    <option>Rock</option>
+                    <option>Español</option>
+                    <option>Jazz</option>
+                    <option>Rap</option>
+                    <option>Trap</option>
+                    <option>Electrónica</option>
+                    <option>Indie</option>
+                    <option>Clasica</option>
+                    <option>Reggae</option>
+                    <option>Heavy metal</option>
+                    <option value="otro">Otro...</option>
+                </select>
+
+                <input type="text" id="otroFavorito"
+                    placeholder="Escribe tu género favorito"
+                    style="display: none;">
+
+                <button type="submit">Enviar sugerencia</button>
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
     
 </body> 

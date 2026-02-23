@@ -155,7 +155,69 @@ footer .Noisify img{
 .Contactanos .p{
     font-size: small;
 }
-
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: (0,0,0,0.85);
+    backdrop-filter: blur(5px);
+}
+.modal-contenido{
+    background-color: #181818;
+    margin: 8% auto;
+    padding: 35px;
+    width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    animation: aparecer 0.3s ease;
+}
+@keyframes aparecer{
+    from {transform: scale(0.8); opacity: 0;}
+    to { transform: scale(1); opacity: 1; }
+}
+.modal h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal input,
+.modal textarea,
+.modal select{
+    width: 100%;
+    margin: 8px 0 15px 0;
+    padding: 10px;
+    background-color: #282828;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+.checkbox-group label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+.modal button{
+    background-color: #9f0eb3;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.formulario button:hover{
+    background-color: #b325eb;
+    transform: scale(1.03);
+}
+.cerrar {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
 @media screen and (max-width: 1024px){
     /* Para tablets */
 
