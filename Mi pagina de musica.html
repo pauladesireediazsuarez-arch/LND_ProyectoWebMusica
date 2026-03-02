@@ -10,13 +10,76 @@
 
 <body>
 
+    <!-- MENÚ -->
     <nav class="menu">
-        <ul>
-            <li><img src="img/Icono noisify (2).png" alt="Noisify"></li>
-            <li>Inicio</li>
-            <li>Álbumes</li>
-            <li>Géneros</li>
-            <li>Contacto</li>
+        <div class="menu-toggle" id="menuToggle">
+            <img src="img/icono menu.png" alt="Noisify">
+        </div>
+
+        <ul class="menu-items">
+            <li><a href="#Inicio" class="scroll-link">Inicio</a></li>
+
+            <li class="dropdown">
+                Álbumes
+                <ul class="submenu">
+                    <li><a href="#EntreDosAguas" class="scroll-link">Entre dos aguas</a></li>
+                    <li><a href="#MujerContraMujer" class="scroll-link">Mujer contra mujer</a></li>
+                    <li><a href="#CorazonPartio" class="scroll-link">Corazón Partío</a></li>
+                    <li><a href="#LeyendaDelTiempo" class="scroll-link">La leyenda del tiempo</a></li>
+                    <li><a href="#LolaFlores" class="scroll-link">Lola Flores</a></li>
+                    <li><a href="#Thriller" class="scroll-link">Thriller</a></li>
+                    <li><a href="#PetSounds" class="scroll-link">Pet sounds</a></li>
+                    <li><a href="#LikeAPrayer" class="scroll-link">Like a prayer</a></li>
+                    <li><a href="#BackToBlack" class="scroll-link">Back to black</a></li>
+                    <li><a href="#SongInAMinor" class="scroll-link">Song in a Minor</a></li>
+                    <li><a href="#NightAtTheOpera" class="scroll-link">A night at the opera</a></li>
+                    <li><a href="#AbbeyRoad" class="scroll-link">Abbey Road</a></li>
+                    <li><a href="#Nevermind" class="scroll-link">Nevermind</a></li>
+                    <li><a href="#OkComputer" class="scroll-link">Ok Computer</a></li>
+                    <li><a href="#AppetiteForDestruction" class="scroll-link">Appetite For Destruction</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <span class="dropdown-title">Géneros</span>
+                <ul class="submenu">
+
+                    <li class="genre">
+                        <div class="genre-header">Español</div>
+                            <ul class="genre-list">
+                                <li><a href="#EntreDosAguas" class="scroll-link">Entre dos aguas</a></li>
+                                <li><a href="#MujerContraMujer" class="scroll-link">Mujer contra mujer</a></li>
+                                <li><a href="#CorazonPartio" class="scroll-link">Corazón Partío</a></li>
+                                <li><a href="#LeyendaDelTiempo" class="scroll-link">La leyenda del tiempo</a></li>
+                                <li><a href="#LolaFlores" class="scroll-link">Lola Flores</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="genre">
+                            <div class="genre-header">Pop</div>
+                            <ul class="genre-list">
+                                <li><a href="#Thriller" class="scroll-link">Thriller</a></li>
+                                <li><a href="#PetSounds" class="scroll-link">Pet sounds</a></li>
+                                <li><a href="#LikeAPrayer" class="scroll-link">Like a prayer</a></li>
+                                <li><a href="#BackToBlack" class="scroll-link">Back to black</a></li>
+                                <li><a href="#SongInAMinor" class="scroll-link">Song in a Minor</a></li>
+                            </ul>
+                    </li>
+
+                    <li class="genre">
+                        <div class="genre-header">Rock</div>
+                        <ul class="genre-list">
+                            <li><a href="#NightAtTheOpera" class="scroll-link">A night at the opera</a></li>
+                            <li><a href="#AbbeyRoad" class="scroll-link">Abbey Road</a></li>
+                            <li><a href="#Nevermind" class="scroll-link">Nevermind</a></li>
+                            <li><a href="#OkComputer" class="scroll-link">Ok Computer</a></li>
+                            <li><a href="#AppetiteForDestruction" class="scroll-link">Appetite For Destruction</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="#Contacto" class="scroll-link">Contacto</a></li>
         </ul>
     </nav>
     
@@ -41,134 +104,119 @@
     <div class="scroll">
         <div class="Tops">
         
-                <section class="TopEspañol">
+            <!-- TOP ESPAÑOL -->
+            <section id="TopEspañol" class="TopEspañol">
                 <h2>Top Español</h2>
-                    
-                    <article class="album">
-                            <img src="img/Top Español/Entre dos aguas Paco de Lucía Top 1.jpg" alt="Top1">
-                            <p>Entre dos aguas</p>
-                            <h4>Paco de Lucía</h4>
-                    </article>
+                <article id="EntreDosAguas" class="album">
+                    <img src="img/Top Español/Entre dos aguas Paco de Lucía Top 1.jpg" alt="EntreDosAguas">
+                    <p>Entre dos aguas</p>
+                    <h4>Paco de Lucía</h4>
+                </article>
+                <article id="MujerContraMujer" class="album">
+                    <img src="img/Top Español/Mujer conta Mujer Mecano Top 2.jpg" alt="MujerContraMujer">
+                    <p>Mujer contra mujer</p>
+                    <h4>Mecano</h4>
+                </article>
+                <article id="CorazonPartio" class="album">
+                    <img src="img/Top Español/Corazon Partio Alejandro Sanz Top 3.JPEG" alt="CorazonPartio">
+                    <p>Corazón Partío</p>
+                    <h4>Alejandro Sanz</h4>
+                </article>
+                <article id="LeyendaDelTiempo" class="album">
+                    <img src="img/Top Español/La Leyenda del tiempo Camaron de la isla Top 4.jpg" alt="LeyendaDelTiempo">
+                    <p>La leyenda del tiempo</p>
+                    <h4>Camaron de la Isla</h4>
+                </article>
+                <article id="LolaFlores" class="album">
+                    <img src="img/Top Español/Lola Flores - Lola Flores Top 5.jpg" alt="LolaFlores">
+                    <p>Lola Flores</p>
+                    <h4>Lola Flores</h4>
+                </article>
+            </section>
 
-                    <article class="album">
-                        <img src="img/Top Español/Mujer conta Mujer Mecano Top 2.jpg" alt="Top2">
-                        <p>Mujer contra mujer</p>
-                        <h4>Mecano</h4>
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Español/Corazon Partio Alejandro Sanz Top 3.JPEG" alt="Top3">
-                        <p>Corazón Partío</p>
-                        <h4>Alejandro Sanz</h4>
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Español/La Leyenda del tiempo Camaron de la isla Top 4.jpg" alt="Top4">
-                        <p>La leyenda del tiempo</p>
-                        <h4>Camaron de la Isla</h4>                   
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Español/Lola Flores - Lola Flores Top 5.jpg" alt="Top5">
-                        <p>Lola Flores</p>
-                        <h4>Lola Flores</h4>                    
-                    </article>
-                </section>
-                
-                <section class="TopPop">
+            <!-- TOP POP -->
+            <section id="TopPop" class="TopPop">
                 <h2>Top Pop</h2>
+                <article id="Thriller" class="album">
+                    <img src="img/Top Pop/Thriller Michael Jackson Top 1.jpg" alt="Thriller">
+                    <p>Thriller</p>
+                    <h4>Michael Jackson</h4>
+                </article>
+                <article id="PetSounds" class="album">
+                    <img src="img/Top Pop/Pet sounds The beach boys Top 2.jpg" alt="PetSounds">
+                    <p>Pet sounds</p>
+                    <h4>The Beach Boys</h4>
+                </article>
+                <article id="LikeAPrayer" class="album">
+                    <img src="img/Top Pop/Like a Prayer Madonna Top 3.jpg" alt="LikeAPrayer">
+                    <p>Like a prayer</p>
+                    <h4>Madonna</h4>
+                </article>
+                <article id="BackToBlack" class="album">
+                    <img src="img/Top Pop/Back to black Amy winehouse Top 4.jpg" alt="BackToBlack">
+                    <p>Back to black</p>
+                    <h4>Amy Winehouse</h4>
+                </article>
+                <article id="SongInAMinor" class="album">
+                    <img src="img/Top Pop/Song in a Minor Alicia Keys Top 5.jpg" alt="SongInAMinor">
+                    <p>Song in a Minor</p>
+                    <h4>Alicia Keys</h4>
+                </article>
+            </section>
 
-                    <article class="album">
-                            <img src="img/Top Pop/Thriller Michael Jackson Top 1.jpg" alt="Top1Pop">
-                            <p>Thriller</p>
-                            <h4>Michael Jacksongit</h4>                        
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Pop/Pet sounds The beach boys Top 2.jpg" alt="Top2Pop">
-                        <p>Pet sounds</p>
-                        <h4>The beach boys</h4>
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Pop/Like a Prayer Madonna Top 3.jpg" alt="Top3Pop">
-                        <p>Like a prayer</p>
-                        <h4>Madonna</h4>                    
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Pop/Back to black Amy winehouse Top 4.jpg" alt="Top4Pop">
-                        <p>Back to black</p>
-                        <h4>Amy winehouse</h4>                    
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Pop/Song in a Minor Alicia Keys Top 5.jpg" alt="Top5Pop">
-                        <p>Song in a Minor</p>
-                        <h4>Alicia Keys</h4>                    
-                    </article>
-
-                </section>
-
-                <section class="TopRock">
+            <!-- TOP ROCK -->
+            <section id="TopRock" class="TopRock">
                 <h2>Top Rock</h2>
-
-                    <article class="album">
-                            <img src="img/Top Rock/A night at the opera Queen Top 1.jpg" alt="Top1Rock">
-                            <p>A night at the opera</p>
-                            <h4>Queen</h4>
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Rock/Abbey Road The Beatles Top 2.jpg" alt="Top2Rock">
-                        <p>Abbey Road</p>
-                        <h4>The beatles</h4>                   
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Rock/Nevermind Nirvana Top 3.jpg" alt="Top3Rock">
-                        <p>Nevermind</p>
-                        <h4>Nirvana</h4>                    
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Rock/Ok Computer Radiohead Top 4.jpg" alt="Top4Rock">
-                        <p>Ok Computer</p>
-                        <h4>Radiohead</h4>                    
-                    </article>
-
-                    <article class="album">
-                        <img src="img/Top Rock/Appetite For Destruction Gun's N' Roses Top 5.jpg" alt="Top5Rock">
-                        <p>Appetite For Destruction</p>
-                        <h4>Gun's N' Roses</h4>                     
-                    </article>
-
-                </section>
-
+                <article id="NightAtTheOpera" class="album">
+                    <img src="img/Top Rock/A night at the opera Queen Top 1.jpg" alt="NightAtTheOpera">
+                    <p>A night at the opera</p>
+                    <h4>Queen</h4>
+                </article>
+                <article id="AbbeyRoad" class="album">
+                    <img src="img/Top Rock/Abbey Road The Beatles Top 2.jpg" alt="AbbeyRoad">
+                    <p>Abbey Road</p>
+                    <h4>The Beatles</h4>
+                </article>
+                <article id="Nevermind" class="album">
+                    <img src="img/Top Rock/Nevermind Nirvana Top 3.jpg" alt="Nevermind">
+                    <p>Nevermind</p>
+                    <h4>Nirvana</h4>
+                </article>
+                <article id="OkComputer" class="album">
+                    <img src="img/Top Rock/Ok Computer Radiohead Top 4.jpg" alt="OkComputer">
+                    <p>Ok Computer</p>
+                    <h4>Radiohead</h4>
+                </article>
+                <article id="AppetiteForDestruction" class="album">
+                    <img src="img/Top Rock/Appetite For Destruction Gun's N' Roses Top 5.jpg" alt="AppetiteForDestruction">
+                    <p>Appetite For Destruction</p>
+                    <h4>Gun's N' Roses</h4>
+                </article>
+            </section>
             </section>
         </div>
     </div>
-    <footer>
-        <section class="Redes">
-            <img src="img/Redes sociales/facebook.png" alt="Facebook">
-            <img src="img/Redes sociales/instagram.png" alt="Instagram">
-            <img src="img/Redes sociales/snapchat.png" alt="Snapchat">
-            <img src="img/Redes sociales/Twitter.png" alt="Twitter">
-        </section>
-
-        <section class="Contactanos">
-            <p>Si crees que nos faltan géneros de música o álbumes por añadir, contácta con nosotros o rellena este 
-                <a href="#" id="abrirformulario" class="abrirFormulario">formulario</a>
-            </p>
-        </section>
-
-        <section class="Noisify">
-            <img src="img/Icono noisify (2).png" alt="NoisifyFoot">
-        </section>
-    </footer>
+    <section id="Contacto">
+        <footer>
+            <div class="Redes">
+                <img src="img/Redes sociales/facebook.png" alt="Facebook">
+                <img src="img/Redes sociales/instagram.png" alt="Instagram">
+                <img src="img/Redes sociales/snapchat.png" alt="Snapchat">
+                <img src="img/Redes sociales/Twitter.png" alt="Twitter">
+            </div>
+            <div class="Contactanos">
+                <p>Si crees que nos faltan géneros de música o álbumes por añadir, contácta con nosotros o rellena este 
+                    <a href="#" id="abrirFormulario">formulario</a>
+                </p>
+            </div>
+            <div class="Noisify">
+                <img src="img/Icono noisify (2).png" alt="NoisifyFoot">
+            </div>
+        </footer>
+    </section>
 
     <div id="modal" class="modal">
-        <div class="modal-contenido"></div>
+        <div class="modal-contenido">
 
             <span id="cerrarModal" class="cerrar">&times;</span>
 
@@ -220,7 +268,7 @@
             </form>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     
 </body> 
 

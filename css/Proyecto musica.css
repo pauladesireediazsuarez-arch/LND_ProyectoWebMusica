@@ -4,36 +4,203 @@
     font-weight: bold;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     background-color: black;
     color: white;
     font-family: sans-serif;
     padding-bottom: 90px;
 }
-.menu{
+.menu {
+    position: fixed;
     top: 0;
-    margin: 0;
-    position: sticky;
-    flex-direction: column;
-    z-index: 3000;
+    left: 0;
+    height: 70px;
+    width: 100px; /* solo icono al inicio */
     background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    transition: width 0.4s ease;
+    overflow: hidden;
+    z-index: 5000;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: visible;
 }
-.menu ul{
-    list-style-type: none;
-    font-size: small;
+
+/* CUANDO ESTÁ ABIERTO */
+.menu.abierto {
+    width: 100%;
+    backdrop-filter: blur(8px);
 }
-.menu li{
-    display: inline-block;
-    padding: 15px;
+
+/* ICONO */
+.menu-toggle {
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-toggle img {
+    width: 81px;
+    transition: transform 0.4s ease;
+    transform: rotate(90deg);
+}
+
+/* ROTACIÓN DEL ICONO */
+.menu-toggle.activo img {
+    transform: rotate(0deg);
+}
+
+/* LISTA */
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-left: 40px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease;
+    align-items: center;
+}
+
+/* CUANDO SE ABRE */
+.menu.abierto .menu-items {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ITEMS */
+.menu-items li a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
     color: white;
+    font-size: 14px;
+    transition: 0.3s;
+    font-size: 15px;
+    letter-spacing: 0.4;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease ;
 }
-.menu li img{
-    width: 25px;
+.menu-items >li{
+    position: relative;
 }
-.menu li:hover{
+.menu-items li a:hover {
     color: rgb(184, 41, 184);
-    font-weight: bold;
-    cursor: pointer
+    transform: scale(1.05);
+}
+.dropdown {
+    position: relative;
+}
+
+/* Contenedor del submenu */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #121212;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.05);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Mostrar submenu cuando esté abierto */
+.dropdown.open > .submenu {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Título Géneros */
+.dropdown-title {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-title:hover {
+    color: #b325eb;
+}
+/* ===== ITEMS DEL SUBMENU ===== */
+
+.submenu li {
+    list-style: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+
+.submenu li:hover {
+    color: #b325eb;
+}
+
+/* ===== BLOQUES DE GÉNERO ===== */
+
+.genre {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabecera del género */
+.genre-header {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 6px 0;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.genre-header:hover {
+    color: #b325eb;
+}
+
+/* Lista interna */
+.genre-list {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    opacity: 0.7;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+/* Mostrar lista cuando esté abierta */
+.genre.open .genre-list {
+    display: flex;
+    opacity: 1;
+}
+
+/* Álbumes */
+.genre-list li a{
+    text-decoration: none;
+    font-size: 13px;
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0,3 ease;
+}
+
+.genre-list li a:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: #b325eb;
+    transform: scale(1.05);
 }
 .principal p{
     text-align: center;
@@ -162,17 +329,22 @@ footer .Noisify img{
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    background-color: (0,0,0,0.85);
-    backdrop-filter: blur(5px);
+    height: 100vh;
+    background-color: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 .modal-contenido{
     background-color: #181818;
-    margin: 8% auto;
     padding: 35px;
-    width: 420px;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    margin-top: 2%;
+    height: 50rem;
+    margin-bottom: 80px;
+    width: 410px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px #9f0eb3;
     animation: aparecer 0.3s ease;
 }
 @keyframes aparecer{
@@ -194,10 +366,29 @@ footer .Noisify img{
     border-radius: 6px;
     color: white;
 }
+.checkbox-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .checkbox-group label{
-    display: block;
-    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
     font-weight: normal;
+    gap: 12px;
+    padding: 8px 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.checkbox-group label:hover{
+    background-color: #2f2f2f;
+    border-radius: 10px;
+    transform: scale(1.02);
+}
+.checkbox-group input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    accent-color: #9f0eb3;
 }
 .modal button{
     background-color: #9f0eb3;
