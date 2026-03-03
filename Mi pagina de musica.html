@@ -17,10 +17,12 @@
         </div>
 
         <ul class="menu-items">
-            <li><a href="#Inicio" class="scroll-link">Inicio</a></li>
+            <li class="dropdown">
+                <span class="dropdown-title" id="inicioBtn">Inicio</span>
+            </li>
 
             <li class="dropdown">
-                Álbumes
+                <span class="dropdown-title">Álbumes</span>
                 <ul class="submenu">
                     <li><a href="#EntreDosAguas" class="scroll-link">Entre dos aguas</a></li>
                     <li><a href="#MujerContraMujer" class="scroll-link">Mujer contra mujer</a></li>
@@ -79,7 +81,43 @@
                 </ul>
             </li>
 
-            <li><a href="#Contacto" class="scroll-link">Contacto</a></li>
+            <li>
+                <a href="#" id="artistasBtn">Artistas</a>
+            </li>
+
+
+            <li class="dropdown">
+                <span class="dropdown-title">Contacto</span>
+
+                <ul class="submenu contacto-submenu">
+
+                    <li class="contacto-item">
+                        <img src="img/Redes sociales/facebook.png" alt="Facebook">
+                        <span>Facebook</span>
+                    </li>
+
+                    <li class="contacto-item">
+                        <img src="img/Redes sociales/instagram.png" alt="Instagram">
+                        <span>Instagram</span>
+                    </li>
+
+                    <li class="contacto-item">
+                        <img src="img/Redes sociales/snapchat.png" alt="Snapchat">
+                        <span>Snapchat</span>
+                    </li>
+
+                    <li class="contacto-item">
+                        <img src="img/Redes sociales/Twitter.png" alt="X">
+                        <span>X</span>
+                    </li>
+
+                    <hr>
+
+                    <li class="contacto-form" id="abrirFormularioMenu">Formulario</li>
+
+                </ul>
+            </li>
+
         </ul>
     </nav>
     
@@ -196,13 +234,88 @@
             </section>
         </div>
     </div>
+
+    <!-- ================= SECCIÓN ARTISTAS ================= -->
+
+    <section id="ArtistasSection" class="artistas-section">
+
+        <h2 class="titulo-artistas">Artistas Destacados</h2>
+
+        <div class="artistas-container">
+
+            <!-- PACO DE LUCÍA -->
+            <div class="artista-card">
+                <img src="img/Artistas destacados/paco-de-lucía-imagen.jpg" alt="Paco de Lucía">
+
+                <div class="artista-info">
+                    <h3>Paco de Lucía</h3>
+                    <h4>Entre dos aguas</h4>
+
+                    <p class="texto-corto">
+                        Guitarrista revolucionario del flamenco que llevó la música española a lo más alto con su técnica impecable.
+                    </p>
+
+                    <p class="texto-largo">
+                        Con una sensibilidad única, fusionó tradición y modernidad. "Entre dos aguas" marcó un antes y un después en la historia del flamenco instrumental.
+                    </p>
+
+                    <button class="btn-mas">...más</button>
+                </div>
+            </div>
+
+
+            <!-- MICHAEL JACKSON -->
+            <div class="artista-card">
+                <img src="img/Artistas destacados/Michael Jackson - Pop.jpg" alt="Michael Jackson">
+
+                <div class="artista-info">
+                    <h3>Michael Jackson</h3>
+                    <h4>Thriller</h4>
+
+                    <p class="texto-corto">
+                        El Rey del Pop redefinió la industria musical con su talento y coreografías icónicas.
+                    </p>
+
+                    <p class="texto-largo">
+                        "Thriller" es el álbum más vendido de la historia. Revolucionó los videoclips y elevó el espectáculo musical a otro nivel.
+                    </p>
+
+                    <button class="btn-mas">...más</button>
+                </div>
+            </div>
+
+
+            <!-- QUEEN -->
+            <div class="artista-card">
+                <img src="img/Artistas destacados/Queen.jpg" alt="Queen">
+
+                <div class="artista-info">
+                    <h3>Queen</h3>
+                    <h4>A Night at the Opera</h4>
+
+                    <p class="texto-corto">
+                        Banda británica que elevó el rock a una dimensión épica y teatral.
+                    </p>
+
+                    <p class="texto-largo">
+                        Con una mezcla de ópera y rock, este álbum consolidó su lugar como una de las bandas más influyentes de todos los tiempos.
+                    </p>
+
+                    <button class="btn-mas">...más</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
     <section id="Contacto">
         <footer>
             <div class="Redes">
-                <img src="img/Redes sociales/facebook.png" alt="Facebook">
-                <img src="img/Redes sociales/instagram.png" alt="Instagram">
-                <img src="img/Redes sociales/snapchat.png" alt="Snapchat">
-                <img src="img/Redes sociales/Twitter.png" alt="Twitter">
+                <a href="#"><img src="img/Redes sociales/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/Redes sociales/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/Redes sociales/snapchat.png" alt="Snapchat"></a>
+                <a href="#"><img src="img/Redes sociales/Twitter.png" alt="X"></a>
             </div>
             <div class="Contactanos">
                 <p>Si crees que nos faltan géneros de música o álbumes por añadir, contácta con nosotros o rellena este 

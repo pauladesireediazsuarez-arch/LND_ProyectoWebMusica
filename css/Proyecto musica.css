@@ -3,8 +3,6 @@
     margin: 0;
     font-weight: bold;
     box-sizing: border-box;
-}
-html {
     scroll-behavior: smooth;
 }
 body{
@@ -72,30 +70,34 @@ body{
     transform: translateX(0);
 }
 
-/* ITEMS */
-.menu-items li a{
+/* ===== TEXTO PRINCIPAL DEL MENU ===== */
+.menu-items > li,
+.menu-items > li a,
+.dropdown-title {
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    cursor: pointer;
-    color: white;
-    font-size: 14px;
-    transition: 0.3s;
     font-size: 15px;
-    letter-spacing: 0.4;
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.3s ease ;
+    font-weight: bold;   /* todos igual de gordos */
+    letter-spacing: 0.4px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
 }
-.menu-items >li{
-    position: relative;
-}
-.menu-items li a:hover {
-    color: rgb(184, 41, 184);
+
+/* hover */
+.menu-items > li:hover,
+.menu-items > li a:hover,
+.dropdown-title:hover {
+    color: #b325eb;
     transform: scale(1.05);
+
+}
+.menu-items > li{
+    position: relative;
 }
 .dropdown {
     position: relative;
 }
-
 /* Contenedor del submenu */
 .submenu {
     position: absolute;
@@ -122,18 +124,6 @@ body{
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Título Géneros */
-.dropdown-title {
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.dropdown-title:hover {
-    color: #b325eb;
-}
-/* ===== ITEMS DEL SUBMENU ===== */
-
 .submenu li {
     list-style: none;
     font-size: 14px;
@@ -300,17 +290,26 @@ footer{
     align-items: center;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
-}   
+}
+footer .Redes{
+    display: flex;
+    gap: 15px;
+}
 footer .Redes img{
     height: 27px;
-    padding: 3px;
-    border-radius: 6px;
+    padding: 4px;
+    border-radius: 7px;
+    transition: 0.3s;
 }
 .Redes:hover{
     cursor: pointer;
 }
 footer .Noisify img{
     height: 60px;
+}
+footer .Redes img:hover{
+    transform: scale(1.2);
+    background-color: #1f1f1f;
 }
 .Contactanos{
     display: flex;
@@ -322,6 +321,46 @@ footer .Noisify img{
 .Contactanos .p{
     font-size: small;
 }
+.contacto-submenu {
+    min-width: 200px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contacto-item img {
+    width: 22px;
+}
+
+.contacto-item:hover {
+    color: #b325eb;
+    transform: scale(1.03);
+}
+
+.contacto-submenu hr {
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 10px 0;
+}
+
+.contacto-form {
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contacto-form:hover {
+    color: #b325eb;
+}
 .modal{
     display: none;
     position: fixed;
@@ -332,7 +371,6 @@ footer .Noisify img{
     height: 100vh;
     background-color: rgba(0,0,0,0.85);
     backdrop-filter: blur(6px);
-    display: flex;
     align-items: flex-start;
     justify-content: center;
 }
@@ -340,7 +378,8 @@ footer .Noisify img{
     background-color: #181818;
     padding: 35px;
     margin-top: 2%;
-    height: 50rem;
+    max-width: 90vh;
+    overflow-y: auto;
     margin-bottom: 80px;
     width: 410px;
     border-radius: 18px;
@@ -400,7 +439,7 @@ footer .Noisify img{
     cursor: pointer;
     transition: 0.3s;
 }
-.formulario button:hover{
+#formulario button:hover{
     background-color: #b325eb;
     transform: scale(1.03);
 }
@@ -408,6 +447,82 @@ footer .Noisify img{
     float: right;
     font-size: 24px;
     cursor: pointer;
+}
+.artistas-section{
+    display: none;
+    min-height: 100vh;
+    padding: 140px 60px 100px 60px;
+    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+    animation: fadeInArtistas 0.6s ease;
+}
+@keyframes fadeInArtistas{
+    from{ opacity: 0; transform: translateY(30px);}
+    to{ opacity: 1; transform: translateY(0);}
+}
+.titulo-artistas{
+    font-size: 35px;
+    margin-bottom: 60px;
+    margin-left: 60px;
+}
+.artistas-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+/* TARJETA DIFERENTE A LAS DE ALBUM */
+
+.artista-card{
+    background: linear-gradient(145deg, #1f1f1f, #111);
+    width: 350px;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    box-shadow: 0 0 30px rgba(179,37,235,0.15);
+}
+.artista-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(179,37,235,0.4);
+}
+.artista-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(75%);
+    transition: 0.4s;
+}
+.artista-card:hover img{
+    filter: brightness(100%);
+}
+.artista-info{
+    padding: 25px;
+}
+.artista-info h3{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.artista-info h4{
+    font-weight: lighter;
+    font-size: 14px;
+    color: #b325eb;
+    margin-bottom: 15px;
+}
+.texto-largo{
+    display: none;
+    margin-top: 10px;
+    font-weight: normal;
+}
+.btn-mas{
+    margin-top: 15px;
+    background-color: #9f0eb3;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-mas:hover{
+    background-color: #b325eb;
 }
 @media screen and (max-width: 1024px){
     /* Para tablets */
