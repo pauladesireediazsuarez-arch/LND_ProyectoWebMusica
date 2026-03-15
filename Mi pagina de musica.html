@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Paula Díaz">
     <title>Proyecto musica</title>
-    <link rel="stylesheet" href="css/Proyecto musica.css">
+    <link rel="stylesheet" href="css/Proyecto-musica.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
     <!-- MENÚ -->
     <nav class="menu">
         <div class="menu-toggle" id="menuToggle">
-            <img src="img/icono menu.png" alt="Noisify">
+            <img src="img/icono-menu.png" alt="Noisify">
         </div>
 
         <ul class="menu-items">
@@ -89,34 +89,26 @@
             <li class="dropdown">
                 <span class="dropdown-title">Contacto</span>
 
-                <ul class="submenu contacto-submenu">
-
-                    <li class="contacto-item">
-                        <img src="img/Redes sociales/facebook.png" alt="Facebook">
-                        <span>Facebook</span>
-                    </li>
-
-                    <li class="contacto-item">
-                        <img src="img/Redes sociales/instagram.png" alt="Instagram">
-                        <span>Instagram</span>
-                    </li>
-
-                    <li class="contacto-item">
-                        <img src="img/Redes sociales/snapchat.png" alt="Snapchat">
-                        <span>Snapchat</span>
-                    </li>
-
-                    <li class="contacto-item">
-                        <img src="img/Redes sociales/Twitter.png" alt="X">
-                        <span>X</span>
-                    </li>
-
-                    <hr>
-
-                    <li class="contacto-form" id="abrirFormularioMenu">Formulario</li>
-
-                </ul>
+        <ul class="submenu contacto-submenu">
+            <li class="contacto-item">
+                <img src="img/Redes-sociales/facebook.png" alt="Facebook">
+                <span>Facebook</span>
             </li>
+            <li class="contacto-item">
+                <img src="img/Redes-sociales/instagram.png" alt="Instagram">
+                <span>Instagram</span>
+            </li>
+            <li class="contacto-item">
+                <img src="img/Redes-sociales/snapchat.png" alt="Snapchat">
+                <span>Snapchat</span>
+            </li>
+            <li class="contacto-item">
+                <img src="img/Redes-sociales/Twitter.png" alt="X">
+                <span>X</span>
+            </li>
+            <li><hr></li> <!-- HR envuelto en li -->
+            <li class="contacto-form" id="abrirFormularioMenu">Formulario</li>
+        </ul>
 
         </ul>
     </nav>
@@ -124,21 +116,28 @@
     <div class="principal">
 
         <header>
-            <img src="img/Icono noisify (2).png" alt="Noisify" id="HeaderNoisify">
+
+        <video autoplay muted loop playsinline class="video-fondo">
+            <source src="mp4/vinilo.mp4" type="video/mp4">
+        </video>
+
+
+            <img src="img/Icono-noisify.png" alt="Noisify" id="HeaderNoisify">
             <div class="fondo">
                 <div class="carrusel" id="carrusel">
-                    <img src="img/Top Español/Entre dos aguas Paco de Lucía Top 1.jpg" alt="FondoPacodeLucía">
-                    <img src="img/Top Jazz/Getz - Gilberto Stan Getz & Joao Gilberto Top 4.jpg" alt="FondoGetz">
-                    <img src="img/Top Rock/Nevermind Nirvana Top 3.jpg" alt="FondoNirvana">
-                    <img src="img/Top Pop/Song in a Minor Alicia Keys Top 5.jpg" alt="FondoAliciaKeys">
-                    <img src="img/Top Rap/The Marshall Mathers Eminem Top 1.jpg" alt="FondoEminem">
+                    <img src="img/Top-Español/Entredosaguas-PacodeLucía-Top1.jpg" alt="FondoPacodeLucía">
+                    <img src="img/Top-Jazz/Getz-GilbertoStanGetz&JoaoGilberto-Top4.jpg" alt="FondoGetz">
+                    <img src="img/Top-Rock/Nevermind-Nirvana-Top3.jpg" alt="FondoNirvana">
+                    <img src="img/Top-Pop/SonginaMinor-AliciaKeys-Top5.jpg" alt="FondoAliciaKeys">
+                    <img src="img/Top-Rap/TheMarshallMathers-Eminem-Top1.jpg" alt="FondoEminem">
                 </div>
             </div>
         </header>     
         <p>Entérate de los albumes TOPS GLOBALES de cada género</p>
             
     </div>
-   
+
+
     <div class="scroll">
         <div class="Tops">
         
@@ -146,29 +145,29 @@
             <section id="TopEspañol" class="TopEspañol">
                 <h2>Top Español</h2>
                 <article id="EntreDosAguas" class="album">
-                    <img src="img/Top Español/Entre dos aguas Paco de Lucía Top 1.jpg" alt="EntreDosAguas">
+                    <img src="img/Top-Español/Entredosaguas-PacodeLucía-Top1.jpg" alt="EntreDosAguas">
                     <p>Entre dos aguas</p>
-                    <h4>Paco de Lucía</h4>
+                    <h3>Paco de Lucía</h3>
                 </article>
                 <article id="MujerContraMujer" class="album">
-                    <img src="img/Top Español/Mujer conta Mujer Mecano Top 2.jpg" alt="MujerContraMujer">
+                    <img src="img/Top-Español/MujercontraMujer-Mecano-Top2.jpg" alt="MujerContraMujer">
                     <p>Mujer contra mujer</p>
-                    <h4>Mecano</h4>
+                    <h3>Mecano</h3>
                 </article>
                 <article id="CorazonPartio" class="album">
-                    <img src="img/Top Español/Corazon Partio Alejandro Sanz Top 3.JPEG" alt="CorazonPartio">
+                    <img src="img/Top-Español/CorazonPartio-AlejandroSanz-Top3.JPEG" alt="CorazonPartio">
                     <p>Corazón Partío</p>
-                    <h4>Alejandro Sanz</h4>
+                    <h3>Alejandro Sanz</h3>
                 </article>
                 <article id="LeyendaDelTiempo" class="album">
-                    <img src="img/Top Español/La Leyenda del tiempo Camaron de la isla Top 4.jpg" alt="LeyendaDelTiempo">
+                    <img src="img/Top-Español/LaLeyendadeltiempo-Camarondelaisla-Top4.jpg" alt="LeyendaDelTiempo">
                     <p>La leyenda del tiempo</p>
-                    <h4>Camaron de la Isla</h4>
+                    <h3>Camaron de la Isla</h3>
                 </article>
                 <article id="LolaFlores" class="album">
-                    <img src="img/Top Español/Lola Flores - Lola Flores Top 5.jpg" alt="LolaFlores">
+                    <img src="img/Top-Español/LolaFlores-LolaFlores-Top5.jpg" alt="LolaFlores">
                     <p>Lola Flores</p>
-                    <h4>Lola Flores</h4>
+                    <h3>Lola Flores</h3>
                 </article>
             </section>
 
@@ -176,29 +175,29 @@
             <section id="TopPop" class="TopPop">
                 <h2>Top Pop</h2>
                 <article id="Thriller" class="album">
-                    <img src="img/Top Pop/Thriller Michael Jackson Top 1.jpg" alt="Thriller">
+                    <img src="img/Top-Pop/Thriller-MichaelJackson-Top1.jpg" alt="Thriller">
                     <p>Thriller</p>
-                    <h4>Michael Jackson</h4>
+                    <h3>Michael Jackson</h3>
                 </article>
                 <article id="PetSounds" class="album">
-                    <img src="img/Top Pop/Pet sounds The beach boys Top 2.jpg" alt="PetSounds">
+                    <img src="img/Top-Pop/Petsounds-Thebeachboys-Top2.jpg" alt="PetSounds">
                     <p>Pet sounds</p>
-                    <h4>The Beach Boys</h4>
+                    <h3>The Beach Boys</h3>
                 </article>
                 <article id="LikeAPrayer" class="album">
-                    <img src="img/Top Pop/Like a Prayer Madonna Top 3.jpg" alt="LikeAPrayer">
+                    <img src="img/Top-Pop/LikeaPrayer-MadonnaTop3.jpg" alt="LikeAPrayer">
                     <p>Like a prayer</p>
-                    <h4>Madonna</h4>
+                    <h3>Madonna</h3>
                 </article>
                 <article id="BackToBlack" class="album">
-                    <img src="img/Top Pop/Back to black Amy winehouse Top 4.jpg" alt="BackToBlack">
+                    <img src="img/Top-Pop/Backtoblack-Amywinehouse-Top4.jpg" alt="BackToBlack">
                     <p>Back to black</p>
-                    <h4>Amy Winehouse</h4>
+                    <h3>Amy Winehouse</h3>
                 </article>
                 <article id="SongInAMinor" class="album">
-                    <img src="img/Top Pop/Song in a Minor Alicia Keys Top 5.jpg" alt="SongInAMinor">
+                    <img src="img/Top-Pop/SonginaMinor-AliciaKeys-Top5.jpg" alt="SongInAMinor">
                     <p>Song in a Minor</p>
-                    <h4>Alicia Keys</h4>
+                    <h3>Alicia Keys</h3>
                 </article>
             </section>
 
@@ -206,34 +205,99 @@
             <section id="TopRock" class="TopRock">
                 <h2>Top Rock</h2>
                 <article id="NightAtTheOpera" class="album">
-                    <img src="img/Top Rock/A night at the opera Queen Top 1.jpg" alt="NightAtTheOpera">
+                    <img src="img/Top-Rock/Anightattheopera-Queen-Top1.jpg" alt="NightAtTheOpera">
                     <p>A night at the opera</p>
-                    <h4>Queen</h4>
+                    <h3>Queen</h3>
                 </article>
                 <article id="AbbeyRoad" class="album">
-                    <img src="img/Top Rock/Abbey Road The Beatles Top 2.jpg" alt="AbbeyRoad">
+                    <img src="img/Top-Rock/AbbeyRoad-TheBeatles-Top2.jpg" alt="AbbeyRoad">
                     <p>Abbey Road</p>
-                    <h4>The Beatles</h4>
+                    <h3>The Beatles</h3>
                 </article>
                 <article id="Nevermind" class="album">
-                    <img src="img/Top Rock/Nevermind Nirvana Top 3.jpg" alt="Nevermind">
+                    <img src="img/Top-Rock/Nevermind-Nirvana-Top3.jpg" alt="Nevermind">
                     <p>Nevermind</p>
                     <h4>Nirvana</h4>
                 </article>
                 <article id="OkComputer" class="album">
-                    <img src="img/Top Rock/Ok Computer Radiohead Top 4.jpg" alt="OkComputer">
+                    <img src="img/Top-Rock/OkComputer-Radiohead-Top4.jpg" alt="OkComputer">
                     <p>Ok Computer</p>
-                    <h4>Radiohead</h4>
+                    <h3>Radiohead</h3>
                 </article>
                 <article id="AppetiteForDestruction" class="album">
-                    <img src="img/Top Rock/Appetite For Destruction Gun's N' Roses Top 5.jpg" alt="AppetiteForDestruction">
+                    <img src="img/Top-Rock/AppetiteForDestruction-GunsNRoses-Top5.jpg" alt="AppetiteForDestruction">
                     <p>Appetite For Destruction</p>
-                    <h4>Gun's N' Roses</h4>
+                    <h3>Gun's N' Roses</h3>
                 </article>
             </section>
-            </section>
+
         </div>
     </div>
+
+    <section class="tabla-albumes">
+
+        <h2>Álbumes más influyentes por género</h2>
+
+        <table>
+
+        <thead>
+        <tr>
+        <th>Género</th>
+        <th>Álbum</th>
+        <th>Artista</th>
+        <th>Año</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr>
+        <td>Español</td>
+        <td>Entre dos aguas</td>
+        <td>Paco de Lucía</td>
+        <td>1973</td>
+        </tr>
+
+        <tr>
+        <td>Pop</td>
+        <td>Thriller</td>
+        <td>Michael Jackson</td>
+        <td>1982</td>
+        </tr>
+
+        <tr>
+        <td>Rock</td>
+        <td>Nevermind</td>
+        <td>Nirvana</td>
+        <td>1991</td>
+        </tr>
+
+        </tbody>
+
+        <tfoot>
+        <tr>
+        <td colspan="4">Selección de álbumes representativos de los géneros mostrados en la página</td>
+        </tr>
+        </tfoot>
+
+        </table>
+
+    </section>
+
+    <!-- SECCIÓN CURIOSIDADES -->
+
+    <section class="curiosidades">
+
+        <h2>Curiosidades musicales</h2>
+
+        <ul>
+        <li>Thriller es el álbum más vendido de la historia.</li>
+        <li>Nirvana revolucionó el rock en los 90.</li>
+        <li>Paco de Lucía llevó el flamenco al mundo.</li>
+        <li>Queen mezcló rock con ópera.</li>
+        </ul>
+
+    </section>
 
     <!-- ================= SECCIÓN ARTISTAS ================= -->
 
@@ -245,7 +309,7 @@
 
             <!-- PACO DE LUCÍA -->
             <div class="artista-card">
-                <img src="img/Artistas destacados/paco-de-lucía-imagen.jpg" alt="Paco de Lucía">
+                <img src="img/Artistas-destacados/paco-de-lucía-imagen.jpg" alt="Paco de Lucía">
 
                 <div class="artista-info">
                     <h3>Paco de Lucía</h3>
@@ -266,7 +330,7 @@
 
             <!-- MICHAEL JACKSON -->
             <div class="artista-card">
-                <img src="img/Artistas destacados/Michael Jackson - Pop.jpg" alt="Michael Jackson">
+                <img src="img/Artistas-destacados/MichaelJackson-Pop.jpg" alt="Michael Jackson">
 
                 <div class="artista-info">
                     <h3>Michael Jackson</h3>
@@ -287,7 +351,7 @@
 
             <!-- QUEEN -->
             <div class="artista-card">
-                <img src="img/Artistas destacados/Queen.jpg" alt="Queen">
+                <img src="img/Artistas-destacados/Queen.jpg" alt="Queen">
 
                 <div class="artista-info">
                     <h3>Queen</h3>
@@ -310,23 +374,24 @@
     </section>
 
     <section id="Contacto">
-        <footer>
-            <div class="Redes">
-                <a href="#"><img src="img/Redes sociales/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="img/Redes sociales/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="img/Redes sociales/snapchat.png" alt="Snapchat"></a>
-                <a href="#"><img src="img/Redes sociales/Twitter.png" alt="X"></a>
-            </div>
-            <div class="Contactanos">
-                <p>Si crees que nos faltan géneros de música o álbumes por añadir, contácta con nosotros o rellena este 
-                    <a href="#" id="abrirFormulario">formulario</a>
-                </p>
-            </div>
-            <div class="Noisify">
-                <img src="img/Icono noisify (2).png" alt="NoisifyFoot">
-            </div>
-        </footer>
-    </section>
+    <h2>Contacto</h2>
+    <footer>
+        <div class="Redes">
+            <a href="#"><img src="img/Redes-sociales/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/Redes-sociales/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/Redes-sociales/snapchat.png" alt="Snapchat"></a>
+            <a href="#"><img src="img/Redes-sociales/Twitter.png" alt="X"></a>
+        </div>
+        <div class="Contactanos">
+            <p>Si crees que nos faltan géneros de música o álbumes por añadir, contácta con nosotros o rellena este 
+                <a href="#" id="abrirFormulario">formulario</a>
+            </p>
+        </div>
+        <div class="Noisify">
+            <img src="img/Icono-noisify.png" alt="NoisifyFoot">
+        </div>
+    </footer>
+</section>
 
     <div id="modal" class="modal">
         <div class="modal-contenido">

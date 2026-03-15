@@ -1,7 +1,3 @@
-// ==========================
-// MENÚ PRINCIPAL
-// ==========================
-
 const menuToggle = document.getElementById("menuToggle");
 const menu = document.querySelector(".menu");
 
@@ -55,7 +51,7 @@ genres.forEach(genre => {
 
 
 // ==========================
-// CARRUSEL (CORREGIDO)
+// CARRUSEL
 // ==========================
 
 const carrusel = document.getElementById("carrusel");
@@ -117,35 +113,6 @@ window.addEventListener("click", e => {
     }
 });
 
-
-// ==========================
-// SCROLL SUAVE
-// ==========================
-
-const scrollLinks = document.querySelectorAll(".scroll-link");
-
-scrollLinks.forEach(link => {
-
-    link.addEventListener("click", function(e){
-
-        e.preventDefault();
-
-        const targetID = this.getAttribute("href").substring(1);
-        const target = document.getElementById(targetID);
-
-        if(target){
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-
-        menu.classList.remove("abierto");
-        menuToggle.classList.remove("activo");
-    });
-});
-
-
 // ==========================
 // BOTÓN INICIO
 // ==========================
@@ -163,6 +130,14 @@ if(inicioBtn){
 
         if(topsContainer){
             topsContainer.style.display = "block";
+        }
+
+        if(tablaAlbumes){
+            tablaAlbumes.style.display = "block";
+        }
+
+        if(curiosidades){
+            curiosidades.style.display = "block";
         }
 
         window.scrollTo({
@@ -183,6 +158,8 @@ if(inicioBtn){
 // ==========================
 
 const artistasBtn = document.getElementById("artistasBtn");
+const tablaAlbumes = document.querySelector(".tabla-albumes");
+const curiosidades = document.querySelector(".curiosidades");
 
 if(artistasBtn){
 
@@ -190,6 +167,14 @@ if(artistasBtn){
 
         if(topsContainer){
             topsContainer.style.display = "none";
+        }
+
+        if(tablaAlbumes){
+            tablaAlbumes.style.display = "none";
+        }
+
+        if(curiosidades){
+            curiosidades.style.display = "none";
         }
 
         if(artistasSection){
@@ -205,7 +190,6 @@ if(artistasBtn){
         menuToggle.classList.remove("activo");
     });
 }
-
 
 // ==========================
 // BOTÓN ... MÁS
